@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video course – BuildCore</title>
+<meta name="description" content="Learn BuildCore in 21 narrated lessons: one company and one project from installation to month end.">
+<meta name="theme-color" content="#060b17">
+<meta property="og:title" content="Video course – BuildCore">
+<meta property="og:description" content="Learn BuildCore in 21 narrated lessons: one company and one project from installation to month end.">
+<meta property="og:image" content="img/dash_full.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="sbar"></div>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><span class="logo">B</span><span>BuildCore<small>CONSTRUCTION ERP</small></span></a>
+  <nav class="nav"><a href="vision.html">Vision</a><a href="features.html">Features</a><a href="editions.html">Editions</a><a href="tutorials.html" class=on>Tutorials</a><a href="screenshots.html">Screenshots</a><a href="releases.html">What's new</a><a href="docs.html">Docs</a><a href="download.html">Download</a><a class="btn primary sm" href="contact.html#demo">Book a demo</a></nav>
+  <button class="burger" aria-label="Menu">☰</button>
+</div></header>
+<main>
+
+<div class="page-hero"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="gridfx"></div><div class="wrap">
+  <span class="tag" data-r>Video course · series 2</span><h1 data-r style="--i:1">Learn BuildCore in one continuous story</h1>
+  <p data-r style="--i:2">21 narrated lessons of 10 minutes or more. One company, Himal Builders Pvt. Ltd., and one road project, Hetauda–Bhimphedi, from installing BuildCore and creating the company, through daily site, store, billing and accounts work, to a locked month end. Nothing is repeated.</p>
+  <div class="crumbs" data-stagger><span><b id="nLes">21</b> lessons</span><span><b id="nMin">3.9</b> hours</span><span><b>7</b> chapters</span><span>1080p with captions</span></div>
+  <div class="progress" style="max-width:420px;margin-top:28px" data-r><i id="pbar"></i></div><span id="ptxt" style="font-size:.9rem;color:var(--d-mute)"></span>
+</div></div>
+<section><div class="wrap course">
+  <aside data-r="left"><b style="color:var(--navy);font-family:var(--hfont)">Course outline</b><div id="toc" style="margin-top:10px"></div>
+  <p style="font-size:.85rem;color:var(--mute);margin:14px 0 0">Prefer reading? Every lesson follows the <a href="docs.html">user guide</a>.</p></aside>
+  <div id="course"></div>
+</div></section>
+<div class="lb" id="tlb"><button class="x" aria-label="Close">×</button>
+  <div class="lbox">
+    <div id="tmedia"></div>
+    <div style="padding:24px 28px"><span class="tag" id="tch"></span><h2 id="tt" style="font-size:1.5rem"></h2><p id="ta" style="color:var(--mute)"></p>
+    <ol class="steps" id="ts"></ol>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px"><button class="btn teal sm" id="tdone">Mark as watched</button><button class="btn line sm" id="tnext">Next lesson →</button></div></div>
+  </div></div>
+
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div><a class="brand" href="index.html"><span class="logo">B</span><span>BuildCore<small>CONSTRUCTION ERP</small></span></a>
+      <p style="margin-top:16px;max-width:340px">One system for the site, the store, billing, machines, cash and the books. Made for contractors in Nepal.</p>
+      <p><span data-c="company" class="ph">[Company name]</span><br><span data-c="address" class="ph">[Address]</span></p></div>
+    <div><h4>Product</h4><a href="vision.html">Vision</a><a href="features.html">Features</a><a href="editions.html">Editions &amp; licence</a><a href="screenshots.html">Screenshots</a><a href="releases.html">What's new</a></div>
+    <div><h4>Learn</h4><a href="tutorials.html">Video course</a><a href="docs.html">User guide</a><a href="docs.html#faq">Questions</a><a href="download.html">Download</a></div>
+    <div><h4>Contact</h4><a data-c="phone" class="ph" href="contact.html">[Phone]</a><a data-c="email" class="ph" href="contact.html">[E-mail]</a><a href="contact.html">Pricing</a><a href="contact.html#demo">Book a demo</a></div>
+  </div>
+  <div class="legal"><span>© <span data-c="year">2026</span> BuildCore. All rights reserved.</span><span>Version 2.48.0 · Works offline · Windows 10/11 · Server edition for 80+ users</span></div>
+</div></footer>
+<button class="totop" aria-label="Back to top">↑</button>
+<script src="assets/config.js"></script>
+<script src="assets/lessons.js"></script>
+<script>
+(function(){
+ var C=window.BC_COURSE||[],all=[],done={},mins=0;
+ try{done=JSON.parse(localStorage.getItem('bc_done2')||'{}')}catch(e){}
+ function save(){try{localStorage.setItem('bc_done2',JSON.stringify(done))}catch(e){}}
+ var html='',toc='';
+ C.forEach(function(ch,ci){
+  toc+='<a href="#ch'+ci+'"><span>'+(ci+1)+'</span>'+ch.ch+'</a>';
+  html+='<div class="chapter" id="ch'+ci+'"><h2 data-r><span class="n">'+(ci+1)+'</span>'+ch.ch+'</h2><div class="lessons">';
+  ch.lessons.forEach(function(l,li){ l.chap=ch.ch; all.push(l); mins+=parseInt(l.dur)||0;
+   html+='<button class="lesson'+(done[l.id]?' done':'')+'" data-r style="--i:'+(li%2)+'" data-id="'+l.id+'"><div class="thumb" style="background-image:url(img/'+l.thumb+'.jpg)"><span class="play">▶</span><span class="num">'+l.id+'</span><span class="dur">'+l.dur+'</span></div><div class="body"><b>'+l.title+'</b><p>'+l.about+'</p><span class="soon'+(l.video?' ready':'')+'">'+(l.video?'▶ VIDEO + WRITTEN STEPS':'VIDEO SOON · STEPS READY')+'</span></div></button>';
+  });
+  html+='</div></div>';
+ });
+ document.getElementById('course').innerHTML=html;document.getElementById('toc').innerHTML=toc;
+ document.getElementById('nLes').textContent=all.length;document.getElementById('nMin').textContent=(mins/60).toFixed(1);
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});
+  document.querySelectorAll('#course [data-r]').forEach(function(el){io.observe(el)});} else document.querySelectorAll('#course [data-r]').forEach(function(el){el.classList.add('in')});
+ function prog(){var n=all.filter(function(l){return done[l.id]}).length;document.getElementById('pbar').style.width=(100*n/all.length)+'%';document.getElementById('ptxt').textContent=n+' of '+all.length+' lessons watched';}
+ prog();
+ var lb=document.getElementById('tlb'),cur=0;
+ function media(l){
+  if(!l.video) return '<div style="aspect-ratio:16/9;background:#0b2545 url(img/'+l.thumb+'.jpg) top left/cover;position:relative"><div style="position:absolute;inset:0;background:rgba(11,37,69,.72);display:grid;place-items:center;color:#fff;text-align:center;padding:20px"><div><div style="font-size:2.4rem">🎬</div><b style="font-size:1.2rem">Video coming soon</b><br><span style="color:#c3d2e4">The written steps are below.</span></div></div></div>';
+  var y=l.video.match(/(?:youtu\.be\/|v=|embed\/)([\w-]{11})/);
+  if(y) return '<div style="aspect-ratio:16/9"><iframe src="https://www.youtube.com/embed/'+y[1]+'?rel=0&autoplay=1" style="width:100%;height:100%;border:0;display:block" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>';
+  var vtt=l.video.replace(/\.mp4$/,'.vtt');
+  return '<video controls autoplay playsinline style="width:100%;display:block;background:#000"><source src="'+l.video+'" type="video/mp4"><track kind="captions" src="'+vtt+'" srclang="en" label="English"></video>';
+ }
+ function open(i){cur=i;var l=all[i];document.getElementById('tmedia').innerHTML=media(l);document.getElementById('tch').textContent=l.chap+' · Lesson '+l.id+' · '+l.dur;
+  document.getElementById('tt').textContent=l.title;document.getElementById('ta').textContent=l.about;
+  document.getElementById('ts').innerHTML=l.steps.map(function(s){return '<li>'+s+'</li>'}).join('');
+  document.getElementById('tdone').textContent=done[l.id]?'Watched ✓':'Mark as watched';
+  document.getElementById('tnext').style.display=i<all.length-1?'':'none';lb.classList.add('open');lb.scrollTop=0;document.body.style.overflow='hidden';}
+ function close(){lb.classList.remove('open');document.getElementById('tmedia').innerHTML='';document.body.style.overflow='';}
+ document.querySelectorAll('.lesson').forEach(function(b){b.addEventListener('click',function(){open(all.findIndex(function(l){return l.id===b.dataset.id}))})});
+ lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('x'))close();});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))close();});
+ document.getElementById('tnext').onclick=function(){open(cur+1)};
+ document.getElementById('tdone').onclick=function(){var l=all[cur];done[l.id]=1;save();prog();this.textContent='Watched ✓';document.querySelector('.lesson[data-id="'+l.id+'"]').classList.add('done');};
+ if(location.hash.match(/^#l\d+/)){var k=all.findIndex(function(l){return 'l'+l.id===location.hash.slice(1)});if(k>=0)open(k);}
+})();
+</script>
+<script src="assets/site.js"></script>
+</body>
+</html>
